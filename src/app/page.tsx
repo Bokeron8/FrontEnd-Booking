@@ -1,100 +1,135 @@
-import Image from "next/image";
-
+import BuildingIcon from "@/icons/BuildingIcon";
 export default function Home() {
-  return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+  const isShopOpen = true;
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+  return (
+    <div>
+      <div className="flex px-3 py-4 max-w-[95%] align-middle m-auto">
+        <h3 className="font-semibold text-lg">BarberShop</h3>
+        <p className="ml-auto text-lg">Iniciar sesion</p>
+      </div>
+      <section className="shadow-lg mb-6">
+        <div className="px-3 py-4 max-w-[95%] m-auto">
+          <div className="flex gap-2 items-center">
+            <div className="bg-[#e7e7e7] p-2 rounded-2xl ">
+              <BuildingIcon size={62} />
+            </div>
+            <h1 className="text-2xl font-semibold">BarberShop</h1>
+          </div>
+          <strong>
+            {isShopOpen ? (
+              <span className="text-lime-800">Abierto</span>
+            ) : (
+              <span className="text-red-500">Cerrado</span>
+            )}
+          </strong>
+          <span> (08:00 - 16:00) - España 765, Corrientes</span>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
+      </section>
+      <section className="px-3 py-4 max-w-[95%] m-auto border-b-[1px] pb-12">
+        <h2 className="font-semibold text-3xl mb-4">Servicios</h2>
+
+        <div>
+          <div className="flex gap-2 border-[1px] p-2 items-center">
+            <div className="bg-[#e7e7e7] p-2 rounded-2xl ">
+              <BuildingIcon size={62} />
+            </div>
+            <div>
+              <p className="font-semibold text-lg">Pelo</p>
+              <a href="#" className="underline">
+                Mostrar detalles &gt;
+              </a>
+            </div>
+            <button className="ml-auto p-2 rounded-sm border-[1px] text-blue-400 border-blue-400">
+              Reservar
+            </button>
+          </div>
+        </div>
+        <div>
+          <div className="flex gap-2 border-[1px] p-2 items-center">
+            <div className="bg-[#e7e7e7] p-2 rounded-2xl ">
+              <BuildingIcon size={62} />
+            </div>
+            <div>
+              <p className="font-semibold text-lg">Pelo</p>
+              <a href="#" className="underline">
+                Mostrar detalles &gt;
+              </a>
+            </div>
+            <button className="ml-auto p-2 rounded-sm border-[1px] text-blue-400 border-blue-400">
+              Reservar
+            </button>
+          </div>
+        </div>
+      </section>
+      <section className="px-3 py-4 max-w-[95%] m-auto border-b-[1px] pb-12">
+        <span className="font-semibold text-3xl">Miembros del personal</span>
+        <span className="text-3xl text-gray-500"> 2</span>
+        <div className="grid grid-cols-5 gap-y-2 mt-4">
+          <div className="gap-2 p-2 flex flex-col items-center">
+            <div className="bg-[#e7e7e7] p-2 rounded-2xl w-fit">
+              <BuildingIcon size={62} />
+            </div>
+            <div className="flex flex-col items-center">
+              <p className="font-semibold text-lg">Franco</p>
+              <a href="#" className="underline">
+                Reservar ahora &gt;
+              </a>
+            </div>
+          </div>
+
+          <div className="gap-2 p-2 flex flex-col items-center">
+            <div className="bg-[#e7e7e7] p-2 rounded-2xl">
+              <BuildingIcon size={62} />
+            </div>
+            <div className="flex flex-col items-center">
+              <p className="font-semibold text-lg">Juan</p>
+              <a href="#" className="underline">
+                Reservar ahora &gt;
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="px-3 py-4 max-w-[95%] m-auto grid grid-cols-[2fr,1fr] gap-4">
+        <p className="font-semibold text-3xl mb-4 col-span-2">Sobre nosotros</p>
+        <div>
+          <p className="font-semibold text-2xl">Direccion</p>
+          <iframe
+            className="w-[80%]"
+            loading="lazy"
+            src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBj6APxS4pPJ6_xjs_zMlb0fVrM_8CcM-8&amp;q=La Rioja 765, Corrientes, AR"
+            title="La Rioja 765, Corrientes, AR"
+          ></iframe>
+        </div>
+        <div>
+          <div>
+            <p className="font-semibold text-2xl">Informacion de contacto</p>
+            <span>37942666666</span>
+          </div>
+          <div className="grid grid-cols-2 gap-2">
+            <p className="font-semibold text-2xl col-span-2">
+              Horario de apertura
+            </p>
+
+            <span className="font-semibold">Domingo</span>
+            <span> Cerrado</span>
+
+            <span className="font-semibold">Lunes</span>
+            <span> 08:00 - 16:00</span>
+
+            <span className="font-semibold">Martes</span>
+            <span> 08:00 - 16:00</span>
+
+            <span className="font-semibold">Miercoles</span>
+            <span> 08:00 - 16:00</span>
+          </div>
+        </div>
+      </section>
+
+      <footer className="text-center border-t-[1px] mt-12 py-4 text-lg">
+        Made with 💖
       </footer>
     </div>
   );
