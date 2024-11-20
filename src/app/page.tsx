@@ -4,12 +4,8 @@ export default function Home() {
 
   return (
     <div>
-      <div className="flex px-3 py-4 max-w-[95%] align-middle m-auto">
-        <h3 className="font-semibold text-lg">BarberShop</h3>
-        <p className="ml-auto text-lg">Iniciar sesion</p>
-      </div>
       <section className="shadow-lg mb-6">
-        <div className="px-3 py-4 max-w-[95%] m-auto">
+        <div className="px-3 py-4 max-w-screen-xl m-auto">
           <div className="flex gap-2 items-center">
             <div className="bg-[#e7e7e7] p-2 rounded-2xl ">
               <BuildingIcon size={62} />
@@ -26,7 +22,7 @@ export default function Home() {
           <span> (08:00 - 16:00) - España 765, Corrientes</span>
         </div>
       </section>
-      <section className="px-3 py-4 max-w-[95%] m-auto border-b-[1px] pb-12">
+      <section className="px-3 py-4 max-w-screen-xl m-auto border-b-[1px] pb-12">
         <h2 className="font-semibold text-3xl mb-4">Servicios</h2>
 
         <div>
@@ -62,7 +58,7 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section className="px-3 py-4 max-w-[95%] m-auto border-b-[1px] pb-12">
+      <section className="px-3 py-4 max-w-screen-xl m-auto border-b-[1px] pb-12">
         <span className="font-semibold text-3xl">Miembros del personal</span>
         <span className="text-3xl text-gray-500"> 2</span>
         <div className="grid grid-cols-5 gap-y-2 mt-4">
@@ -92,7 +88,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="px-3 py-4 max-w-[95%] m-auto grid grid-cols-[2fr,1fr] gap-4">
+      <section className="px-3 py-4 max-w-screen-xl m-auto grid grid-cols-[2fr,1fr] gap-4">
         <p className="font-semibold text-3xl mb-4 col-span-2">Sobre nosotros</p>
         <div>
           <p className="font-semibold text-2xl">Direccion</p>
@@ -127,10 +123,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-
-      <footer className="text-center border-t-[1px] mt-12 py-4 text-lg">
-        Made with 💖
-      </footer>
     </div>
   );
 }
